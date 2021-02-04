@@ -1,0 +1,207 @@
+/* Include padding and border in the element's total width and height */
+* {
+    box-sizing: border-box;
+}
+/* responsive web-design code was taken from https://www.w3schools.com */
+/* control appearance of webpage with respect to screen size */
+@media only screen and (min-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+      float: left;
+      width: 100%;
+}
+/* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+}
+/* .banner and .centered classes are used together to keep the background image and text together */
+.banner {
+    position: relative;
+    text-align: center;
+}
+.centered {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    font-size: 40px;
+    transform: translate(-50%, -50%);
+}
+/* The navigation bar was generated using an unordered list. The float: left property gives it a horizontal appearance. */
+ul {
+    list-style-type: none;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; 
+}
+li {
+    float: left;
+}
+li a {
+    color: white;
+    display: block;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 25px;
+}
+li a:hover {
+    color: gray;
+}
+/* styling of h3 and p elements */
+h3 {
+    font-size: 25px;
+}
+p {
+    font-size: 20px;
+}
+/* styling of elements with class blurb */
+.blurb {
+    padding: 0px 20px;
+    text-align: justify;
+}
+#footer {
+    min-height: 40px;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    background-color: black;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: white;
+}
+.row img {
+        padding: 20px;
+}
+/* clear floating elements after row */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.centered a {
+    text-decoration: none; /* remove underline from hyperlink */
+    color: white;
+}
+table {
+    width: 100%;
+    padding: 25px 50px 25px 50px;
+}
+td {
+    text-align: center;
+}
+td:hover {
+    color: gray;
+}
+th {
+    padding-bottom: 25px;
+}
+/* Basis for a responsive iframe container taken from https://www.w3schools.com */ 
+.video-container {
+    position: relative;
+    padding-bottom: 60%; 
+    overflow: hidden;
+}
+/* element, classes, ids adjusted according to screen size */
+@media only screen and (min-width: 768px) {
+    .container_narrow {
+        margin: 0 auto;
+	    padding: 0 300px;
+    }
+    .container_wide {
+        margin: 0 auto;
+        padding: 0 150px;
+}
+    .thumbnail {
+        padding: 50px;
+    }
+    .evenimage {
+        float: right;
+    }
+    .eventext {
+        text-align: left;
+    }
+    .oddtext {
+        text-align: right;        
+    }
+    td, th {
+        font-size: 20px;
+    } 
+    .gallerystyle {
+        width: 325px;
+    }
+    iframe {
+        position: absolute; 
+        display: block;
+        left: 10%; 
+        width: 75%; 
+        height: 75%; 
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .container_narrow {
+        margin: 0 auto;
+	    padding: 0 100px;
+    }
+    .container_wide {
+        margin: 0 auto;
+        padding: 0 50px;
+    }
+    .gallerystyle {
+        width: 250px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .container_narrow {
+	   margin: 0 auto;
+	   padding: 0 50px;
+    }
+    .container_wide {
+        margin: 0 auto;
+        padding: 0 50px;
+    }
+    .thumbnail {
+        padding: 10px; 
+    }
+    #order {
+        display: flex; 
+        flex-direction: column;
+    }
+    #a {
+        order: 2
+    }
+    #b {
+        order: 1
+    }
+    .gallerystyle {
+        width: 500px;
+    }
+    .row p, .row h3  {
+        text-align: center;
+    }
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%;
+    }
+    iframe {
+        position: absolute; 
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+}
